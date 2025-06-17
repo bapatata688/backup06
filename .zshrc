@@ -34,7 +34,7 @@ function fzf-lovely(){
 autoload -U compinit; compinit
 bindkey -v
 export KEYTIMEOUT=1
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/fred/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -52,6 +52,8 @@ server() {
   echo "Presiona Ctrl+C para detener ambos procesos"
   wait $HTTP_PID $LR_PID
 }
+export PATH="$HOME/development/flutter/bin:$PATH"
+
 alias rww='pkill waybar && waybar &'
 alias ghostty-c='nvim ~/.config/ghostty/config'
 alias power-p='powerprofilesctl set performance'
